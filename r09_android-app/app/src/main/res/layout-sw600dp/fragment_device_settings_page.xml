@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_device_nordic_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:isScrollContainer="true"
+        tools:context=".activities.deviceActivities.DeviceMainActivity">
+
+        <Button
+            android:id="@+id/id_movingAVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Moving AVG"
+            app:layout_constraintBottom_toTopOf="@+id/id_autoregression"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_status" />
+
+        <Button
+            android:id="@+id/id_autoregression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Autoregression"
+            app:layout_constraintBottom_toTopOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_movingAVG" />
+
+        <Button
+            android:id="@+id/id_vibra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Vibra"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+        <Button
+            android:id="@+id/id_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_stepCounterZero"
+            app:layout_constraintTop_toTopOf="@+id/id_stepCounterZero" />
+
+        <Button
+            android:id="@+id/id_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="STATUS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_time" />
+
+        <Button
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Time"
+            app:layout_constraintBottom_toTopOf="@+id/id_time_offset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/id_time_offset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Time Offset"
+            app:layout_constraintStart_toEndOf="@+id/id_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/id_stepCounterZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Step counter set zero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_radioButtonGroupPPG" />
+
+        <RadioGroup
+            android:id="@+id/id_radioButtonGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@+id/id_autoregression"
+            app:layout_constraintStart_toEndOf="@+id/id_autoregression"
+            app:layout_constraintTop_toTopOf="@+id/id_movingAVG">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time base" />
+
+            <RadioButton
+                android:id="@+id/id_radioButtonONE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ONE" />
+
+            <RadioButton
+                android:id="@+id/id_radioButtonFIVE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FIVE" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/id_weariness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="Weariness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_vibra" />
+
+        <EditText
+            android:id="@+id/id_wearinessNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:maxEms="3"
+            android:maxLength="3"
+            app:layout_constraintBottom_toBottomOf="@+id/id_weariness"
+            app:layout_constraintStart_toEndOf="@+id/id_weariness" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            app:layout_constraintBottom_toBottomOf="@+id/id_wearinessNumber"
+            app:layout_constraintStart_toEndOf="@+id/id_wearinessNumber"
+            app:layout_constraintTop_toTopOf="@+id/id_wearinessNumber" />
+
+
+        <Button
+            android:id="@+id/id_set_per_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="Set per sec"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_weariness" />
+
+        <RadioGroup
+            android:id="@+id/id_radioButtonGroupPPG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="@+id/id_set_per_sec"
+            app:layout_constraintStart_toEndOf="@+id/id_set_per_sec"
+            app:layout_constraintTop_toTopOf="@+id/id_set_per_sec"
+            app:layout_constraintVertical_bias="0.507">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sec" />
+
+            <RadioButton
+                android:id="@+id/id_radioButtonONEHundred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100" />
+
+            <RadioButton
+                android:id="@+id/id_radioButtonTwoHundred"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="200" />
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="289dp" />
+
+        <Switch
+            android:id="@+id/id_switch_hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="HR"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_stepCounterZero" />
+
+        <Switch
+            android:id="@+id/id_switch_ibi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="IBI"
+            app:layout_constraintStart_toEndOf="@+id/id_switch_hr"
+            app:layout_constraintTop_toBottomOf="@+id/id_stepCounterZero" />
+
+        <Switch
+            android:id="@+id/id_switch_imu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="IMU"
+            app:layout_constraintStart_toEndOf="@+id/id_switch_ibi"
+            app:layout_constraintTop_toBottomOf="@+id/id_stepCounterZero" />
+
+        <Switch
+            android:id="@+id/id_switch_ppg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="PPG"
+            app:layout_constraintStart_toEndOf="@+id/id_switch_imu"
+            app:layout_constraintTop_toBottomOf="@+id/id_stepCounterZero" />
+
+        <Switch
+            android:id="@+id/id_switch_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="STEP"
+            app:layout_constraintStart_toEndOf="@+id/id_switch_ppg"
+            app:layout_constraintTop_toBottomOf="@+id/id_stepCounterZero" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

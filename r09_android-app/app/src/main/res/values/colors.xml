@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#8c9eff</color>
+    <color name="text_color_primary">#484848</color>
+    <color name="black_overlay">#663E67B8</color>
+    <color name="background">#B8B8B8</color>
+    <color name="progressSuccces">#7CB342</color>
+    <color name="progressFailed">#E53935</color>
+    <color name="progressing">#FFB300</color>
+</resources>

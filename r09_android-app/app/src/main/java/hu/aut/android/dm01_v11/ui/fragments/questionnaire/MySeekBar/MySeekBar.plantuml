@@ -1,0 +1,314 @@
+@startuml
+
+title __MYSEEKBAR's Class Diagram__\n
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyBuilder {
+          + clearPadding : boolean
+          ~ context : Context
+          ~ max : float
+          ~ min : float
+          ~ onlyThumbDraggable : boolean
+          ~ progress : float
+          ~ progressValueFloat : boolean
+          ~ r2l : boolean
+          ~ seekSmoothly : boolean
+          ~ showTickMarksType : int
+          ~ thumbAutoAdjust : boolean
+          ~ thumbColor : int
+          ~ thumbColorStateList : ColorStateList
+          ~ thumbDrawable : Drawable
+          ~ thumbSize : int
+          ~ thumbTextColor : int
+          ~ thumbTextShow : int
+          ~ tickCount : int
+          ~ tickMarksColor : int
+          ~ tickMarksColorStateList : ColorStateList
+          ~ tickMarksDrawable : Drawable
+          ~ tickMarksEndsHide : boolean
+          ~ tickMarksSize : int
+          ~ tickMarksSweptHide : boolean
+          ~ tickTextsColor : int
+          ~ tickTextsColorStateList : ColorStateList
+          ~ tickTextsCustomArray : String[]
+          ~ tickTextsShow : int
+          ~ tickTextsSize : int
+          ~ tickTextsTypeFace : Typeface
+          ~ trackBackgroundColor : int
+          ~ trackBackgroundSize : int
+          ~ trackProgressColor : int
+          ~ trackProgressSize : int
+          ~ trackRoundedCorners : boolean
+          ~ userSeekable : boolean
+          + build()
+          + clearPadding()
+          + max()
+          + min()
+          + onlyThumbDraggable()
+          + progress()
+          + progressValueFloat()
+          + r2l()
+          + seekSmoothly()
+          + showTickMarksType()
+          + showTickTextsPosition()
+          + thumbAutoAdjust()
+          + thumbColor()
+          + thumbColorStateList()
+          + thumbDrawable()
+          + thumbDrawable()
+          + thumbDrawable()
+          + thumbSize()
+          + thumbTextColor()
+          + thumbTextPosition()
+          + tickCount()
+          + tickMarksColor()
+          + tickMarksColor()
+          + tickMarksDrawable()
+          + tickMarksDrawable()
+          + tickMarksEndsHide()
+          + tickMarksSize()
+          + tickMarksSweptHide()
+          + tickTextsArray()
+          + tickTextsArray()
+          + tickTextsColor()
+          + tickTextsColorStateList()
+          + tickTextsSize()
+          + tickTextsTypeFace()
+          + trackBackgroundColor()
+          + trackBackgroundSize()
+          + trackProgressColor()
+          + trackProgressSize()
+          + trackRoundedCorners()
+          + userSeekable()
+          ~ MyBuilder()
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyFormatUtils {
+          {static} - LEADING_DECIMALS : char[][]
+          {static} ~ fastFormat()
+          {static} - bigDecFormat()
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      interface hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyOnSeekChangeListener {
+          {abstract} + onSeeking()
+          {abstract} + onStartTrackingTouch()
+          {abstract} + onStopTrackingTouch()
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams {
+          + fromUser : boolean
+          + progress : int
+          + progressFloat : float
+          + thumbPosition : int
+          + tickText : String
+          ~ MySeekParams()
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar {
+          {static} - THUMB_MAX_WIDTH : int
+          - lastProgress : float
+          - mAdjustAuto : boolean
+          - mBackgroundTrack : RectF
+          - mBackgroundTrackColor : int
+          - mBackgroundTrackSize : int
+          - mClearPadding : boolean
+          - mContext : Context
+          - mCustomDrawableMaxHeight : float
+          - mCustomTrackSectionColorResult : boolean
+          - mDefaultTickTextsHeight : int
+          - mFaultTolerance : float
+          - mHoveredTextColor : int
+          - mIsFloatProgress : boolean
+          - mIsTouching : boolean
+          - mMax : float
+          - mMeasuredWidth : int
+          - mMin : float
+          - mOnlyThumbDraggable : boolean
+          - mPaddingLeft : int
+          - mPaddingRight : int
+          - mPaddingTop : int
+          - mPressedThumbBitmap : Bitmap
+          - mPressedThumbColor : int
+          - mProgress : float
+          - mProgressArr : float[]
+          - mProgressTrack : RectF
+          - mProgressTrackColor : int
+          - mProgressTrackSize : int
+          - mR2L : boolean
+          - mRect : Rect
+          - mScale : int
+          - mSectionTrackColorArray : int[]
+          - mSeekBlockLength : float
+          - mSeekLength : float
+          - mSeekSmoothly : boolean
+          - mSelectTickMarksBitmap : Bitmap
+          - mSelectedTextsColor : int
+          - mSelectedTickMarksColor : int
+          - mShowTickMarksType : int
+          - mStockPaint : Paint
+          - mTextCenterX : float[]
+          - mTextPaint : TextPaint
+          - mTextsTypeface : Typeface
+          - mThumbBitmap : Bitmap
+          - mThumbColor : int
+          - mThumbDrawable : Drawable
+          - mThumbRadius : float
+          - mThumbSize : int
+          - mThumbTextColor : int
+          - mThumbTextShowPos : int
+          - mThumbTextY : float
+          - mThumbTouchRadius : float
+          - mTickMarksDrawable : Drawable
+          - mTickMarksEndsHide : boolean
+          - mTickMarksSize : int
+          - mTickMarksSweptHide : boolean
+          - mTickMarksX : float[]
+          - mTickRadius : float
+          - mTickTextY : float
+          - mTickTextsArr : String[]
+          - mTickTextsCustomArray : CharSequence[]
+          - mTickTextsHeight : int
+          - mTickTextsPosition : int
+          - mTickTextsSize : int
+          - mTickTextsWidth : float[]
+          - mTicksCount : int
+          - mTrackRoundedCorners : boolean
+          - mUnSelectedTickMarksColor : int
+          - mUnselectedTextsColor : int
+          - mUnselectedTickMarksBitmap : Bitmap
+          - mUserSeekable : boolean
+          + MyTickSeekBar()
+          + MyTickSeekBar()
+          + MyTickSeekBar()
+          + MyTickSeekBar()
+          + customSectionTrackColor()
+          + customTickTexts()
+          + customTickTextsTypeface()
+          + dispatchTouchEvent()
+          + getMax()
+          + getMin()
+          + getOnSeekChangeListener()
+          + getProgress()
+          + getProgressFloat()
+          + getTickCount()
+          + onTouchEvent()
+          + performClick()
+          + setDecimalScale()
+          + setEnabled()
+          + setMax()
+          + setMin()
+          + setOnSeekChangeListener()
+          + setPadding()
+          + setProgress()
+          + setR2L()
+          + setThumbAdjustAuto()
+          + setThumbDrawable()
+          + setTickCount()
+          + setTickMarksDrawable()
+          + thumbColor()
+          + thumbColorStateList()
+          + tickMarksColor()
+          + tickMarksColor()
+          + tickTextsColor()
+          + tickTextsColorStateList()
+          {static} + with()
+          # onDraw()
+          # onMeasure()
+          # onRestoreInstanceState()
+          # onSaveInstanceState()
+          # onSizeChanged()
+          ~ getTouchX()
+          ~ refreshThumbCenterXByProgress()
+          - adjustTouchX()
+          - apply()
+          - autoAdjustThumb()
+          - calculateProgress()
+          - calculateTouchX()
+          - collectParams()
+          - collectTicksInfo()
+          - drawThumb()
+          - drawThumbText()
+          - drawTickMarks()
+          - drawTickTexts()
+          - drawTrack()
+          - getClosestIndex()
+          - getDrawBitmap()
+          - getHeightByRatio()
+          - getLeftSideTickColor()
+          - getLeftSideTickTextsColor()
+          - getLeftSideTrackSize()
+          - getProgressString()
+          - getRightSideTickColor()
+          - getRightSideTickTextsColor()
+          - getRightSideTrackSize()
+          - getThumbCenterX()
+          - getThumbPosOnTick()
+          - getThumbPosOnTickFloat()
+          - getTickTextByPosition()
+          - hasAboveText()
+          - hasBelowText()
+          - initAttrs()
+          - initDefaultPadding()
+          - initParams()
+          - initProgressRangeValue()
+          - initSeekBarInfo()
+          - initStrokePaint()
+          - initTextPaint()
+          - initTextsArray()
+          - initTextsTypeface()
+          - initThumbBitmap()
+          - initThumbColor()
+          - initTickMarksBitmap()
+          - initTickMarksColor()
+          - initTickTextsColor()
+          - initTickTextsYLocation()
+          - initTrackLocation()
+          - isAboveBelowText()
+          - isTouchSeekBar()
+          - isTouchThumb()
+          - measureTickTextsBonds()
+          - needDrawText()
+          - progressChange()
+          - refreshSeekBar()
+          - refreshSeekBarLocation()
+          - setSeekListener()
+      }
+    }
+  }
+  
+
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar : seekBar
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar -up-|> android.view.View
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyOnSeekChangeListener : mSeekChangeListener
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams : mSeekParams
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false"
+    android:theme="@style/MyTheme">
+    <PreferenceCategory
+        android:title="Profile"
+        android:key="profile_category"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/genderArray"
+            android:entryValues="@array/genderValues"
+            android:key="gender"
+            android:summary="%s"
+            android:title="Gender"
+            app:iconSpaceReserved="false"/>
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/weightArray"
+            android:entryValues="@array/weightValues"
+            android:key="weight"
+            android:title="Weight"
+            android:summary="%s"
+            app:iconSpaceReserved="false"/>
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/heightArray"
+            android:entryValues="@array/heightValues"
+            android:key="height"
+            android:summary="%s"
+            android:title="Height"
+            app:iconSpaceReserved="false"/>
+        <Preference
+            android:key="birthday"
+            android:title="Birthday"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

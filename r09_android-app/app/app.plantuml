@@ -1,0 +1,241 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace androidx.databinding {
+    class androidx.databinding.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    interface androidx.databinding.DataBindingComponent {
+    }
+  }
+  
+
+  namespace androidx.databinding {
+    namespace library.baseAdapters {
+      class androidx.databinding.library.baseAdapters.BR {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    class hu.aut.android.dm01_v11.BR {
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    class hu.aut.android.dm01_v11.BuildConfig {
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    class hu.aut.android.dm01_v11.DataBinderMapperImpl {
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace crashLog {
+      class hu.aut.android.dm01_v11.crashLog.CustomizedExceptionHandler {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace databinding {
+      class hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBindingLandImpl {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace databinding {
+      class hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBindingSw600dpImpl {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyBuilder {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyFormatUtils {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      interface hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyOnSeekChangeListener {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams {
+      }
+    }
+  }
+  
+
+  namespace hu.aut.android.dm01_v11 {
+    namespace ui.fragments.questionnaire.MySeekBar {
+      class hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    class hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl {
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.HRDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.IBIDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.IBIValueDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.IMUDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.IMUValueDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.OTHERDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.PPGDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.PpgValueDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.data {
+    namespace dao {
+      class hu.euronetrt.okoskp.euronethealth.data.dao.StepDatabaseDAO_Impl {
+      }
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor {
+    class hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor.EuronetMeteor {
+    }
+  }
+  
+
+  namespace hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor {
+    class hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor.EuronetMeteorSingleton {
+    }
+  }
+  
+
+  androidx.databinding.DataBinderMapperImpl -up-|> androidx.databinding.MergedDataBinderMapper
+  hu.aut.android.dm01_v11.DataBinderMapperImpl -up-|> androidx.databinding.DataBinderMapper
+  hu.aut.android.dm01_v11.crashLog.CustomizedExceptionHandler .up.|> java.lang.Thread.UncaughtExceptionHandler
+  hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBindingLandImpl -up-|> hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBinding
+  hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBindingSw600dpImpl -up-|> hu.aut.android.dm01_v11.databinding.FragmentDeviceNordicPageBinding
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar : seekBar
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar -up-|> android.view.View
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyOnSeekChangeListener : mSeekChangeListener
+  hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MyTickSeekBar o-- hu.aut.android.dm01_v11.ui.fragments.questionnaire.MySeekBar.MySeekParams : mSeekParams
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl -up-|> hu.euronetrt.okoskp.euronethealth.data.AppDatabase
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.HRDatabaseDAO : _hRDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.IBIDatabaseDAO : _iBIDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.IBIValueDatabaseDAO : _iBIValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.IMUDatabaseDAO : _iMUDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.IMUValueDatabaseDAO : _iMUValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.OTHERDatabaseDAO : _oTHERDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.PPGDatabaseDAO : _pPGDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.PpgValueDatabaseDAO : _ppgValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.AppDatabase_Impl o-- hu.euronetrt.okoskp.euronethealth.data.dao.StepDatabaseDAO : _stepDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.HRDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.HRDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.HRDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.data.dao.IBIDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.IBIDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.IBIDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.data.dao.IBIValueDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.IBIValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.IMUDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.IMUDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.IMUDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.data.dao.IMUValueDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.IMUValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.OTHERDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.OTHERDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.OTHERDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.data.dao.PPGDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.PPGDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.PPGDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.data.dao.PpgValueDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.PpgValueDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.StepDatabaseDAO_Impl .up.|> hu.euronetrt.okoskp.euronethealth.data.dao.StepDatabaseDAO
+  hu.euronetrt.okoskp.euronethealth.data.dao.StepDatabaseDAO_Impl o-- hu.euronetrt.okoskp.euronethealth.data.CollectableTypeConverter : __collectableTypeConverter
+  hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor.EuronetMeteorSingleton -up-|> hu.euronetrt.okoskp.euronethealth.serverCommunicate.meteor.EuronetMeteor
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

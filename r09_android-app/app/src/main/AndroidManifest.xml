@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hu.aut.android.dm01_v11">
+
+    <uses-permission android:name="no.nordicsemi.android.LOG" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- Declaring the special permission -->
+    <permission
+        android:name="hu.aut.android.dm01_v11.mypermission"
+        android:label="my_permission"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_my"
+        android:roundIcon="@mipmap/ic_launcher_my_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".ui.activities.questionnaire.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name="hu.euronetrt.okoskp.euronethealth.dfuManager.dfu.DFUUpdateActivity" />
+        <activity
+            android:name=".ui.activities.startApp.LoadingActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.startApp.loginActivities.AccountLoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.startApp.PolicyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.startApp.loginActivities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.deviceActivities.DeviceMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hu.euronetrt.okoskp.euronethealth.dfuManager.dfu.NotificationActivity"
+            android:label="@string/nordic_uart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hu.euronetrt.okoskp.euronethealth.dfuManager.dfu.FirmwareUpdateActvity"
+            android:label="@string/update_firmware"
+            android:screenOrientation="portrait" />
+
+        <service android:name="hu.euronetrt.okoskp.euronethealth.bluetooth.services.BluetoothLeService" />
+        <service android:name="hu.euronetrt.okoskp.euronethealth.dfuManager.dfu.OwnDfuService" />
+        <service android:name="hu.euronetrt.okoskp.euronethealth.bluetooth.services.DataFirstProcessIntentService" />
+        <service android:name="hu.euronetrt.okoskp.euronethealth.login.loginBackend.service.AccountManagerService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <receiver android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.BOOTReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.BleServiceStartBroadcastReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.START_SERVICE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.BleConnectBroadcastReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.ACL_CONNECTED" />
+                <action android:name="hu.aut.android.dm01_v11.action.ACL_DISCONNECTED" />
+                <action android:name="hu.aut.android.dm01_v11.action.SERVICE_DISCOVER_DONE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.BleBatteryBroadcastReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.BATTERY_DATA_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.ErrorLicenseBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.ERROR_LICENSE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.MHeartRateBroadcastReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.HEART_DATA_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.DFUUpdateBroadcastReciever"
+            android:permission="hu.euronetrt.okoskp.euronethealth.mypermission">
+            <intent-filter>
+                <action android:name="hu.euronetrt.okoskp.euronethealth.action.DFU_START" />
+                <action android:name="hu.euronetrt.okoskp.euronethealth.action.DFU_UPDATE_SUCCESSFULLY" />
+                <action android:name="hu.euronetrt.okoskp.euronethealth.action.DFU_UPDATE_ERROR" />
+                <action android:name="hu.euronetrt.okoskp.euronethealth.action.DFU_UPDATE_PROGRESS_REFRESH" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.MBroadcastDeviceConnChangeReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.DISCONNECT_AVAILABLE" />
+                <action android:name="hu.aut.android.dm01_v11.action.CONNECT_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.ServerNotConnectedBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.SERVER_NOT_CONN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.ServerConnectedBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="hu.aut.android.dm01_v11.action.SERVER_CONN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.BluetoothOFFBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.TriangleSignalBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.TRIANGLESIGNAL_DATA_AVAILABLE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.ScreenUnlockBroadcastReciever"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!--
+receiver
+            android:name="hu.euronetrt.okoskp.euronethealth.broadcastrecievers.ForegroundServiceLifecycleChangeBroadcastReceiver"
+            android:permission="hu.aut.android.dm01_v11.mypermission">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver
+        -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

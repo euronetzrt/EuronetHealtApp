@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false"
+    android:theme="@style/MyTheme">
+    <PreferenceCategory
+        android:title="Settings"
+        android:key="settings_category"
+        android:gravity="start"
+        app:iconSpaceReserved="false">
+        <!--SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="autoDataSave"
+            android:summary="This option if selected will save your data automatic."
+            android:title="Auto Save"
+            app:iconSpaceReserved="false"
+            /-->
+        <!--SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="applicationUpdates"
+            android:summary="This option if selected will allow the application to check for latest versions."
+            android:title="Application Updates"
+            app:iconSpaceReserved="false"
+            /-->
+        <!--SwitchPreferenceCompat
+            android:key="batteryNotification"
+            android:title="Battery notification"
+            app:iconSpaceReserved="false"/-->
+        <SwitchPreferenceCompat
+            android:key="autoStart"
+            android:defaultValue="true"
+            android:title="Auto Start"
+            android:summary="If this option selected will the application will start with system"
+            app:iconSpaceReserved="false"/>
+        <!--SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="autoSync"
+            android:summary="If this option selected will sync your data automatic after the app started."
+            android:title="Auto Sync"
+            app:iconSpaceReserved="false"
+            /-->
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="runAllways"
+            android:summary="If This option selected will the application run in background always. After the application closed too!"
+            android:title="Run Allways"
+            app:iconSpaceReserved="false"
+         />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="About the app"
+        android:key="aboutApp_category"
+        app:iconSpaceReserved="false">
+        <Preference
+            app:iconSpaceReserved="false"
+            android:key="appVersion"
+            android:title="Application version" />
+        <!--Preference
+            app:fragment="hu.aut.android.dm01_v11.ui.fragments.FragmentFeedbackPage"
+            android:key="feedback"
+            android:title="Feedback"
+            android:summary="You can send feedback if you would like"
+            app:iconSpaceReserved="false"
+        /-->
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

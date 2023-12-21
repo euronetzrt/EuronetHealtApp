@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genderArray">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="genderValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="heightArray">
+        <item>160</item>
+        <item>165</item>
+        <item>170</item>
+        <item>175</item>
+        <item>180</item>
+        <item>185</item>
+    </string-array>
+
+    <string-array name="heightValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="weightArray">
+        <item>60kg</item>
+        <item>65kg</item>
+        <item>70kg</item>
+        <item>75kg</item>
+        <item>80kg</item>
+        <item>85kg</item>
+    </string-array>
+
+    <string-array name="weightValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>

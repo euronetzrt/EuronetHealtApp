@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_device_preferenceScreen"
+    android:clickable="true"
+    android:gravity="left"
+    android:theme="@style/MyTheme"
+    android:visibility="visible"
+    app:iconSpaceReserved="true">
+        <PreferenceCategory
+            android:gravity="left"
+            android:key="device_informationCategory"
+            android:title="Device information"
+            android:visibility="visible"
+            app:iconSpaceReserved="false">
+                <!--EditTextPreference
+                    android:defaultValue="Device"
+                    android:key="device_name"
+                    android:selectAllOnFocus="true"
+                    android:singleLine="true"
+                    android:title="Device name"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="model"
+                    android:title="Model"
+                    app:iconSpaceReserved="false" /-->
+                <Preference
+                    android:key="manufacturer"
+                    android:title="Manufacturer"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="battery"
+                    android:title="Battery"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="mac"
+                    android:title="Mac address"
+                    app:iconSpaceReserved="false" />
+
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:key="about_deviceCategory"
+            android:visibility="visible"
+            android:title="About"
+            app:iconSpaceReserved="false">
+                <Preference
+                    android:key="device_status"
+                    android:title="Device status"
+                    android:summary = "%s"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="firmware"
+                    android:title="Firmware"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="hardware"
+                    android:title="Hardware"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="serial"
+                    android:title="Serial number"
+                    app:iconSpaceReserved="false" />
+                <Preference
+                    android:key="disconnect_device"
+                    android:title="Disconnect device"
+                    android:summary="You can disconnect device on your account!"
+                    app:iconSpaceReserved="false" />
+        </PreferenceCategory>
+        <!--PreferenceCategory
+            android:key="add_deviceCategory"
+            android:visibility="visible"
+            android:title="Please add device">
+                <Preference
+                    android:key="deviceadd"
+                    android:summary="Click if you add new device!"
+                    android:title="Add device"
+                    android:gravity="Left"
+                    android:icon="@drawable/ic_devices" />
+        </PreferenceCategory-->
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_threePointMenu">
+
+    <item
+        android:id="@+id/id_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/refresh"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/id_action_user"
+        android:icon="@mipmap/ic_launcher_my_round"
+        android:title="@string/account"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/watch_1633260_960_720"
+        android:id="@+id/id_device_info"
+        android:title="@string/device"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/id_action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/id_nav_disconnect"
+        android:icon="@drawable/ic_action_exit"
+        android:title="@string/bluetooth_disconnect"
+        app:showAsAction="never"/>
+    <!--item
+        android:id="@+id/id_nav_DFU_Update"
+        android:icon="@drawable/ic_system_update"
+        android:title="@string/check_for_updates"
+        app:showAsAction="never"/-->
+    <!--item
+        android:id="@+id/id_nav_device_off"
+        android:icon="@drawable/ic_settings_power"
+        android:title="@string/device_off"
+        app:showAsAction="never"/-->
+    <item
+        android:id="@+id/id_nav_logout"
+        android:icon="@drawable/ic_settings_power"
+        android:title="@string/logout"
+        app:showAsAction="never"/>
+</menu>

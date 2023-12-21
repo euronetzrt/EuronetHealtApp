@@ -1,0 +1,8 @@
+package hu.euronetrt.okoskp.euronethealth.questionnaire
+
+import hu.euronetrt.okoskp.euronethealth.questionnaire.answersResultObjects.QuestionnaireResultListFillable
+import hu.euronetrt.okoskp.euronethealth.questionnaire.questionnaireObjects.QuestionnaireGetModel
+
+interface QuestionnaireInterface {
+    fun questionnaireInterface(questionnaireResultListFillableElement: QuestionnaireResultListFillable, questionnairegetObject: QuestionnaireGetModel)
+}
